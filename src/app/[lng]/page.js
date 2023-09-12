@@ -1,9 +1,11 @@
-import Link from "next/link"
-import { Footer } from "./components/Footer"
-import { useTranslation } from "../i18n"
+import Link from "next/link";
+import { Footer } from "./components/Footer";
+import { useTranslation } from "../i18n";
 
 export default async function Page({ params: { lng } }) {
-  const { t } = await useTranslation(lng)
+  console.log("lng", lng);
+
+  const { t } = await useTranslation(lng);
   return (
     <>
       {/* <h1>Hi there!</h1> */}
@@ -19,5 +21,5 @@ export default async function Page({ params: { lng } }) {
       <br />
       <Footer lng={lng} />
     </>
-  )
+  );
 }
